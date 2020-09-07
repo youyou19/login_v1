@@ -1,19 +1,17 @@
-package com.miu.shoppping
+package com.miu.login_v1
 
-import android.provider.ContactsContract
+import java.io.Serializable
 
-class User {
+class User :Serializable{
 
-    var firstname : String=""
-    var lastname : String =""
-    var username : String =""
-    var email : String =""
-    var password : String =""
-     constructor(firstname:String,lastname:String,username:String,email:String,password:String){
-         this.firstname=firstname
-         this.lastname=lastname
-         this.username=username
-         this.email=email
-         this.password=password
-     }
+    lateinit var firstname:String
+    lateinit var lastname:String
+    lateinit var  username:String
+    lateinit var password :String
+    constructor(firstname:String="first",lastname:String="last",username:String="user",password :String="123"){
+        this.firstname=firstname
+        this.lastname=lastname
+        this.username=username
+        this.password=password
+    }
 }
